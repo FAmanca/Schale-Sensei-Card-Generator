@@ -71,12 +71,14 @@ function generateCard() {
 }
 
 function downloadCard() {
+  let name = document.getElementById("name").value.trim();
   let canvas = document.getElementById("idCardCanvas");
 
   canvas.toBlob(function (blob) {
     let link = document.createElement("a");
     link.href = URL.createObjectURL(blob);
-    link.download = "card(${name}).jpg";
+    console.log(name);
+    link.download = "card_" + name + ".jpg";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
