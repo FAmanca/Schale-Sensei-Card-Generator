@@ -1,6 +1,6 @@
 let template = new Image();
 template.crossOrigin = "anonymous";
-template.src = "image.png";
+template.src = "template.png";
 console.log("Loading template image from:", template.src);
 
 template.onload = function () {
