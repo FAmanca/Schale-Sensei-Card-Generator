@@ -76,7 +76,7 @@ function downloadCard() {
   canvas.toBlob(function (blob) {
     let link = document.createElement("a");
     link.href = URL.createObjectURL(blob);
-    link.download = "kartu_nama.png";
+    link.download = "card(${name}).jpg";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
